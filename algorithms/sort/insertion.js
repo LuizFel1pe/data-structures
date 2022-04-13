@@ -1,7 +1,7 @@
 import { swap, Compare, defaultCompare } from '../../utils/index.js';
 import createNonSortedArray from './helper.js';
 
-function insertionSort(array, compareFn = defaultCompare) {
+export default function insertionSort(array, compareFn = defaultCompare) {
   let temp;
   for (let i = 1; i < array.length; i++) {
     let j = i;
@@ -15,6 +15,3 @@ function insertionSort(array, compareFn = defaultCompare) {
   return array;
 }
 
-const array = createNonSortedArray(10);
-console.log(array);
-console.log(insertionSort(array));
