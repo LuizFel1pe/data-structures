@@ -1,4 +1,4 @@
-class Set {
+export default class Set {
   constructor() {
     this.items = {};
   }
@@ -43,10 +43,11 @@ class Set {
     }
 
     smallerSet.forEach(value => {
-      if (biggerSet.includes(values)) {
+      if (biggerSet.includes(value)) {
         intersectionSet.add(value);
       }
     });
+
     return intersectionSet;
   }
 
@@ -82,6 +83,10 @@ class Set {
 
   size() {
     return Reflect.ownKeys(this.items).length;
+  }
+
+  isEmpty() {
+    return this.size() === 0;
   }
 
   values() {

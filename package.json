@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "test": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache",
+    "test:watch": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --watch --no-cache"
+  }
 }

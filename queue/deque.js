@@ -1,4 +1,4 @@
-class Deque {
+export default class Deque {
   #items;
   #lowestCount;
   #count;
@@ -61,6 +61,12 @@ class Deque {
     return this.#count - this.#lowestCount === 0;
   }
 
+  clear() {
+    this.#count = 0;
+    this.#lowestCount = 0;
+    this.#items = {};
+  }
+
   size() {
     return this.#count - this.#lowestCount;
   }
@@ -78,20 +84,3 @@ class Deque {
     return objString;
   }
 }
-
-const deque = new Deque();
-deque.addBack(1);
-deque.addBack(2);
-deque.addBack(3);
-deque.addBack(4);
-deque.addBack(5);
-deque.addFront(0);
-console.log(deque.toString());
-
-
-
-
-
-
-
-

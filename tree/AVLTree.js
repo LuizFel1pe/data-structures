@@ -2,7 +2,7 @@ import BinarySearchTree from './binarySearchTree.js';
 import { BalanceFactor, Compare, defaultCompare } from '../utils/index.js';
 import { NodeTree } from '../models/node.js';
 
-class AVLTree extends BinarySearchTree {
+export default class AVLTree extends BinarySearchTree {
   constructor(compareFn = defaultCompare) {
     super(compareFn);
     this.root = null;
@@ -64,10 +64,8 @@ class AVLTree extends BinarySearchTree {
     if (bFactor === BalanceFactor.UNBALANCED_RIGHT) {
       const bFactorRight = this.getBalanceFactor(node.right);
       if (bFactorRight === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT) {
-        console.log('here');
         return this.rotationLeft(node);
       } else {
-        console.log('log')
         return this.rotationRL(node);
       }
     }
@@ -132,15 +130,3 @@ class AVLTree extends BinarySearchTree {
     );
   }
 }
-
-const avl = new AVLTree();
-avl.insert(70);
-avl.insert(80);
-avl.insert(50);
-avl.insert(72);
-avl.insert(90);
-avl.insert(75);
-avl.insert(74)
-// avl.insert(95)
-avl.remove(70);
-avl.preOrder(node => console.log(node.key));

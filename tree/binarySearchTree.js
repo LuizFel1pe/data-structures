@@ -145,7 +145,8 @@ export default class BinarySearchTree {
   preOrder(cb) {
     this.preOrderTraverse(this.root, cb);
   }
+  
+  getRoot() {
+    return this.root;
+  }
 }
-
-
-
