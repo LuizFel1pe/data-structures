@@ -24,7 +24,3 @@ function mergeSort(array, compareFn = defaultCompare) {
   }
   return array;
 }
-
-const array = createNonSortedArray(10);
-console.log(array);
-console.log(mergeSort(array));

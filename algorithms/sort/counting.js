@@ -32,6 +32,3 @@ function countingSort(array) {
   });
   return array;
 }
-
-const array = [10, 1, 5, 3, 7, 9, 11, 1, 1, 5, 3, 10, 1];
-console.log(countingSort(array, 10));

@@ -41,7 +41,3 @@ function quick(array, left, right, compareFn) {
 export default function quickSort(array, compareFn = defaultCompare) {
   return quick(array, 0, array.length - 1, compareFn);
 }
-
-// const array = createNonSortedArray(10);
-// console.log(array);
-// console.log(quickSort(array))

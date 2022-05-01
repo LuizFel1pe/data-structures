@@ -58,6 +58,3 @@ function radixSort(array, radixBase = 10) {
 
   return array;
 }
-
-const array = createNonSortedArray(100);
-console.log(radixSort(array));
