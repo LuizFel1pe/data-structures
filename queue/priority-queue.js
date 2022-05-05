@@ -89,7 +89,7 @@ class PriorityQueue {
       return null;
     }
 
-    if (this.#length === 1) {
+    if (this.#queue.length === 1) {
       return this.#queue.pop();
     }
 
