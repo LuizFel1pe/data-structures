@@ -33,3 +33,13 @@ export class RedBlackNode {
   }
 }
 
+export class BTreeNode {
+  constructor(keys, children) {
+    this.keys = keys ? keys : [];
+    this.children = children ? children : [];
+  }
+
+  isLeaf() {
+    return this.children.length === 0;
+  }
+}
